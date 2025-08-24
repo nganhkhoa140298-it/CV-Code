@@ -1,0 +1,171 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ebee; /* Light grey background */
+    color: #1d2129; /* Dark grey text */
+}
+header {
+    background-color: #3b5998; /* Facebook blue */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #005b96; /* Darker blue */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+nav a:hover {
+    color: #03396c; /* Even darker blue */
+}
+nav a .fas {
+    margin-right: 5px;
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f7f7f7;
+    color: #65676b; /* Grey text */
+    font-size: 12px;
+    border-top: 1px solid #e9ebee;
+}
+h1, h2 {
+    color: #1d2129; /* Dark grey text */
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1d2129;
+}
+input, select, textarea {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    font-size: 14px;
+}
+input[type="submit"], input[type="button"] {
+    background-color: #4267b2; /* Facebook blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #365899; /* Darker blue */
+}
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#popupMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    text-align: center;
+}
+#popupMessage button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#popupMessage button:hover {
+    background-color: #365899;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+.checkbox-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #005b96;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.checkbox-label:hover {
+    background-color: #03396c;
+    transform: scale(1.05);
+}
+input[type="checkbox"]:checked + .checkbox-label {
+    background-color: #011f4b;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4267b2; /* Màu xanh Facebook */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #365899; /* Xanh đậm hơn */
+}
+    .event-schedule {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .event-schedule th, .event-schedule td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    .event-schedule th {
+        background-color: #005b96;
+        color: white;
+    }
+    .event-schedule tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .event-schedule tr:hover {
+        background-color: #ddd;
+    }
+    

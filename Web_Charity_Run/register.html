@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Charity Run 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .countdown {
+            position: fixed;
+            top: 60px; /* Đặt thấp hơn để không đè lên thanh công cụ */
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+        .countdown h2 {
+            font-size: 1.2em;
+            margin: 0;
+            margin-bottom: 10px;
+            color: #005b96;
+        }
+        .countdown div {
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001; /* Đặt z-index cao hơn đồng hồ */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #005b96;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #03396c;
+        }
+        nav a .fas {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Register for Charity Run 2024</h1>
+            <p>Join us at SECC, Ho Chi Minh City on October 15th, 2024 for a day full of fun, fitness, and philanthropy!</p>
+            <P>Run for your life!!</P>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="program.html">Program Events</a>
+        <a href="general.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about.html">About Us</a>
+        <a href="inquiry.html">Inquiry/Visitor Form</a>
+    </nav>
+    <main id="content">
+        <section class="countdown" id="countdown">
+            <h2>Countdown to Charity Run 2024</h2>
+            <div id="timer"></div>
+        </section>
+        <section>
+            <h2>Registration Form</h2>
+            <p>Please fill out the form below to register for the Charity Run 2024.</p>
+            <P>Run for your life!!</P>
+            <form id="registrationForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="event">Select Event:</label>
+                <select id="event" name="event">
+                    <option value="5K Run">5K Run</option>
+                    <option value="Kids Fun Run">Kids Fun Run</option>
+                    <option value="Community Fair">Community Fair</option>
+                </select>
+                
+                <label for="age">Age Group:</label>
+                <select id="age" name="age">
+                    <option value="Under 18">Under 18</option>
+                    <option value="18-30">18-30</option>
+                    <option value="31-50">31-50</option>
+                    <option value="Above 50">Above 50</option>
+                </select>
+                
+                <label for="shirtSize">T-Shirt Size:</label>
+                <select id="shirtSize" name="shirtSize">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+                
+                <input type="submit" value="Register" class="cta-button">
+                <input type="button" value="Cancel" class="cta-button" onclick="clearForm()">
+                <p class="alert" id="alertMessage"></p>
+            </form>
+            <div id="popupMessage">
+                <p id="popupText"></p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Charity Run. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let fullName = document.getElementById('fullName').value;
+            let email = document.getElementById('email').value;
+            let eventSelected = document.getElementById('event').value;
+            let age = document.getElementById('age').value;
+            let shirtSize = document.getElementById('shirtSize').value;
+            if (!fullName || !email) {
+                document.getElementById('alertMessage').innerText = 'Please fill in all required fields.';
+            } else {
+                let message = `Thank you for registering!\n\nName: ${fullName}\nEmail: ${email}\nEvent: ${eventSelected}\nAge Group: ${age}\nT-Shirt Size: ${shirtSize}`;
+                document.getElementById('popupText').innerText = message;
+                document.getElementById('popupMessage').style.display = 'block';
+                document.getElementById('registrationForm').reset();
+                document.getElementById('alertMessage').innerText = '';
+            }
+        });
+
+        function clearForm() {
+            document.getElementById('registrationForm').reset();
+            document.getElementById('alertMessage').innerText = '';
+        }
+
+        function closePopup() {
+            document.getElementById('popupMessage').style.display = 'none';
+        }
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 15, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var countdownfunction = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the countdown is finished, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("timer").innerHTML = "The event has started!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

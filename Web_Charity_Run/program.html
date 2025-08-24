@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Events - Charity Run 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .countdown {
+            position: fixed;
+            top: 60px; /* Đặt thấp hơn để không đè lên thanh công cụ */
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+        .countdown h2 {
+            font-size: 1.2em;
+            margin: 0;
+            margin-bottom: 10px;
+            color: #005b96;
+        }
+        .countdown div {
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001; /* Đặt z-index cao hơn đồng hồ */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #005b96;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #03396c;
+        }
+        nav a .fas {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Program Events - Charity Run 2024</h1>
+            <p>Discover all the exciting events and activities planned for Charity Run 2024!</p>
+            <a href="register.html" class="cta-button">Register Now</a>
+            <a href="inquiry.html" class="cta-button">Volunteer Now</a>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="program.html">Program Events</a>
+        <a href="general.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about.html">About Us</a>
+        <a href="inquiry.html">Inquiry/Visitor Form</a>
+    </nav>
+    <main id="content">
+        <section class="countdown" id="countdown">
+            <h2>Countdown to Charity Run 2024</h2>
+            <div id="timer"></div>
+        </section>
+        <section>
+            <h2>Event Schedule</h2>
+            <p>Join us for a fun-filled day with the following activities:</p>
+            <table class="event-schedule">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Events</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>08:00 AM</strong></td>
+                        <td><strong>Opening Ceremony</strong></td>
+                        <td>Kick off the day with inspiring speeches and a ribbon-cutting ceremony.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>09:00 AM</strong></td>
+                        <td><strong>5K Run</strong></td>
+                        <td>Challenge yourself in our main running event, open to all ages and abilities.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:00 AM</strong></td>
+                        <td><strong>Health and Wellness Expo</strong></td>
+                        <td>Explore health and wellness products, services, and demonstrations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>11:00 AM</strong></td>
+                        <td><strong>Kids Fun Run</strong></td>
+                        <td>A special event for our youngest participants to enjoy running and having fun.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>12:00 AM</strong></td>
+                        <td><strong>Lunch Break</strong></td>
+                        <td>Grab a bite from our variety of food stalls offering delicious meals and snacks.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>13:00 AM</strong></td>
+                        <td><strong>Community Workshops</strong></td>
+                        <td>Participate in engaging workshops on fitness, nutrition, and wellness.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>14:00 AM</strong></td>
+                        <td><strong>Live Music Performances</strong></td>
+                        <td>Enjoy performances from local bands and artists.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>15:00 AM</strong></td>
+                        <td><strong>Award Ceremony</strong></td>
+                        <td>Celebrate the achievements of our participants with exciting prizes and recognition.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>16:00 AM</strong></td>
+                        <td><strong>Community Fair</strong></td>
+                        <td>Explore booths and activities from local businesses and organizations.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>18:00 AM</strong></td>
+                        <td><strong>Closing Remarks</strong></td>
+                        <td>Wrap up the day with final thoughts and expressions of gratitude from our organizers.</td>
+                    </tr>                
+                    
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Workshops and Activities</h2>
+            <p>In addition to the main running events, we offer a variety of workshops and activities throughout the day:</p>
+            <ul>
+                <li><strong>Yoga Sessions:</strong> Join our guided yoga sessions to relax and unwind.</li>
+                <li><strong>Nutrition Talks:</strong> Learn about healthy eating habits and nutrition from experts.</li>
+                <li><strong>Fitness Demonstrations:</strong> Participate in fitness demonstrations and try out new workouts.</li>
+                <li><strong>Mental Health Workshops:</strong> Attend workshops focused on mental well-being and stress management.</li>
+                <li><strong>Family Fun Activities:</strong> Enjoy games and activities suitable for the whole family.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Keynote Speakers</h2>
+            <p>We are excited to have the following keynote speakers join us:</p>
+            <ul>
+                <li><strong>Dr. Jane Smith:</strong> Renowned nutritionist and author, speaking on healthy eating habits.</li>
+                <li><strong>John Doe:</strong> Fitness expert and motivational speaker, sharing tips on staying active and fit.</li>
+                <li><strong>Emily Johnson:</strong> Mental health advocate, discussing strategies for mental well-being.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Live Performances</h2>
+            <p>Enjoy live music performances throughout the day from talented local bands and artists:</p>
+            <ul>
+                <li><strong>The Rhythm Kings:</strong> A popular local band playing a mix of rock and pop hits.</li>
+                <li><strong>Acoustic Vibes:</strong> An acoustic duo performing soothing and melodic tunes.</li>
+                <li><strong>DJ Mixmaster:</strong> Our resident DJ spinning the latest tracks to keep the energy high.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Charity Run. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 15, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var countdownfunction = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the countdown is finished, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("timer").innerHTML = "The event has started!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

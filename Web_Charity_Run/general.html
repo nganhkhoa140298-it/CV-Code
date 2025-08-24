@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>General Information - Charity Run 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .countdown {
+            position: fixed;
+            top: 60px; /* Đặt thấp hơn để không đè lên thanh công cụ */
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+        .countdown h2 {
+            font-size: 1.2em;
+            margin: 0;
+            margin-bottom: 10px;
+            color: #005b96;
+        }
+        .countdown div {
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1001; /* Đặt z-index cao hơn đồng hồ */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #005b96;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #03396c;
+        }
+        nav a .fas {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>General Information - Charity Run 2024</h1>
+            <p>Find out everything you need to know about the Charity Run 2024!</p>
+            <a href="register.html" class="cta-button">Register Now</a>
+            <a href="inquiry.html" class="cta-button">Volunteer Now</a>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="program.html">Program Events</a>
+        <a href="general.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about.html">About Us</a>
+        <a href="inquiry.html">Inquiry/Visitor Form</a>
+    </nav>
+    <main id="content">
+        <section class="countdown" id="countdown">
+            <h2>Countdown to Charity Run 2024</h2>
+            <div id="timer"></div>
+        </section>
+        <section>
+            <h2>Event Venue</h2>
+            <p>The event will take place at the Saigon Exhibition and Convention Center (SECC) in Hochiminh City. Below is the information on how to reach the venue:</p>
+            <ul>
+                <li><strong>Address:</strong> 799 Nguyen Van Linh, Tan Phu Ward, District 7, HCMC</li>
+                <li><strong>Parking:</strong> Available on-site with ample space for participants and visitors.</li>
+                <li><strong>Transportation:</strong> Accessible by public transport, with bus routes 20 and 72 stopping nearby.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Event Exhibitors, Partners, Sponsors</h2>
+            <p>We are proud to collaborate with many esteemed partners and sponsors. Here are some of the key contributors:</p>
+            <ul>
+                <li><strong>Main Sponsor:</strong> XYZ Corporation</li>
+                <li><strong>Community Partners:</strong> ABC Foundation, DEF Non-Profit</li>
+                <li><strong>Event Exhibitors:</strong> Various local businesses and organizations showcasing their products and services.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Facilities and Services</h2>
+            <p>The venue offers a range of facilities and services to ensure a comfortable and enjoyable experience for all participants:</p>
+            <ul>
+                <li><strong>Restrooms:</strong> Clean and accessible restrooms located throughout the venue.</li>
+                <li><strong>First Aid:</strong> First aid stations available at key locations with medical personnel on standby.</li>
+                <li><strong>Refreshments:</strong> Multiple food and beverage stalls offering a variety of options.</li>
+                <li><strong>Information Booth:</strong> Information booths to assist participants and visitors with any inquiries.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Accommodation</h2>
+            <p>For those traveling from outside Hochiminh City, there are several accommodation options nearby:</p>
+            <ul>
+                <li><strong>Hotels:</strong> A list of recommended hotels with special rates for event participants.</li>
+                <li><strong>Booking:</strong> Information on how to book your stay and avail discounts.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Information</h2>
+            <p>If you have any questions or need further information, please do not hesitate to contact us:</p>
+            <p>Email: <a href="mailto:info@charityrun2024.com">info@charityrun2024.com</a></p>
+            <p>Phone: +84 123 456 789</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Charity Run. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 15, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var countdownfunction = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the countdown is finished, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("timer").innerHTML = "The event has started!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
